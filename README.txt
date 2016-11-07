@@ -28,7 +28,8 @@ với greet = ["'sup bro", "hey", "*nods*", "hey you get my snap?"]
 ==> encrypt_key = gcd(b2n(greet[0])**0x10001 - enc1,gcd(b2n(greet[1])**0x10001,gcd(b2n(greet[2])**0x10001,b2n(greet[3])**0x10001)))
 
 Tìm được encrypt_key mình đi factor => và sử dụng công thức 
-flag = enc_flag**d mod encrypt_key => flag 
+bây giờ bài toán trở về 1 bài RSA thông thường với N = encrypt_key
+flag = enc_flag**d mod N => flag 
 
 lưu ý: không phải encrypt_key nào cũng factor được bạn nên thử nhiều hơn 1 lần để có thể tìm được 1 cái encrypt_key có thể factor được
   
