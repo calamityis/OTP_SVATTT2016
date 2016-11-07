@@ -18,7 +18,7 @@ yêu cầu đầu tiên đó là tìm Encrypt_key
   enc = b2n(res)**0x10001 mod encrypt_key
   => b2n(res)**0x10001 - enc = K*encrypt_key
 
-nếu nhập hello, hi, goog, chao thì mình sẽ biết được b2n(res) = b2n(greet) 
+nếu nhập hello, hi, good, chao thì mình sẽ biết được b2n(res) = b2n(greet) 
 với greet = ["'sup bro", "hey", "*nods*", "hey you get my snap?"] 
   b2n(greet[0])**0x10001 - enc1 = K1.encrypt_key 
   b2n(greet[1])**0x10001 - enc2 = K2.encrypt_key
