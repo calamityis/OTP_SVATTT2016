@@ -31,7 +31,7 @@ Tìm được encrypt_key mình đi factor => và sử dụng công thức
 bây giờ bài toán trở về 1 bài RSA thông thường với N = encrypt_key
 flag = enc_flag**d mod N => flag 
 
-lưu ý: không phải encrypt_key nào cũng factor được bạn nên thử nhiều hơn 1 lần để có thể tìm được 1 cái encrypt_key có thể factor được
+lưu ý: không phải encrypt_key nào cũng factor được bạn nên thử nhiều lần để có thể tìm được 1 cái encrypt_key có thể factor
   
   
 
