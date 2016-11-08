@@ -25,13 +25,13 @@ với greet = ["'sup bro", "hey", "*nods*", "hey you get my snap?"]
   b2n(greet[2])**0x10001 - enc3 = K3.encrypt_key
   b2n(greet[3])**0x10001 - enc4 = K4.encrypt_key
 
-==> encrypt_key = gcd(b2n(greet[0])**0x10001 - enc1,gcd(b2n(greet[1])**0x10001,gcd(b2n(greet[2])**0x10001,b2n(greet[3])**0x10001)))
+==> encrypt_key = gcd(b2n(greet[0])**0x10001 - enc1,gcd(b2n(greet[1])**0x10001-enc2,gcd(b2n(greet[2])**0x10001-enc3,b2n(greet[3])**0x10001-enc4)))
 
 Tìm được encrypt_key mình đi factor => và sử dụng công thức 
 bây giờ bài toán trở về 1 bài RSA thông thường với N = encrypt_key
 flag = enc_flag**d mod N => flag 
 
-lưu ý: không phải encrypt_key nào cũng factor được bạn nên thử nhiều lần để có thể tìm được 1 cái encrypt_key có thể factor
+lưu ý: không phải encrypt_key nào cũng factor được mình dạo cả chục vòng mới may mắn phát hiện được, bạn nên thử nhiều lần để có thể tìm được 1 cái encrypt_key có thể factor
   
   
 
